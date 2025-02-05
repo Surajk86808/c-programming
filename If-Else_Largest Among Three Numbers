@@ -1,0 +1,22 @@
+ #include <stdio.h>
+
+int main() {
+   int a, b, c;
+   scanf("%d", &a);
+   scanf("%d", &b);
+   scanf("%d", &c);
+   
+   int largest = c;
+
+   if (b > largest) {
+       largest = b;
+   }
+   if (a > largest) {
+       largest = a;
+   }
+
+   printf("The largest number is : %d", largest);
+   
+   return 0;
+}
+
