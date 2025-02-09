@@ -1,0 +1,110 @@
+#include <stdio.h>
+#include <stdbool.h>
+
+int main()
+{ 
+    int year;
+    char Branch;  
+    bool Intern = false;  
+    
+    printf("Rem !Only UpperCase Are Allowed\n");
+    printf("Enter Your Year: ");
+    scanf("%d", &year);
+
+    switch(year) {
+        case 1:
+            printf("Physics\n");
+            printf("Chemistry\n");
+            printf("Maths\n");
+            break;
+        case 2:
+            printf("Enter Your Branch (C, E, M ):\n");
+            scanf(" %c", &Branch);   
+            switch(Branch) {
+                case 'C':
+                    printf("C Programming\n");
+                    printf("Computer Organisation\n");
+                    printf("Web Development\n");
+                    break;
+                case 'E':
+                    printf("Signal Processing\n");
+                    printf("Logic Design\n");
+                    printf("Network Analysis\n");
+                    break;
+                case 'M':
+                    printf("Thermodynamics\n");
+                    printf("Solid Mechanics\n");
+                    printf("Heat Transfer\n");
+                    break;
+                default:
+                    printf("Invalid Branch\n");
+                    break;
+            }
+            break;
+        case 3:
+            printf("Enter Your Branch (C, E, M ):\n");
+            scanf(" %c", &Branch);   
+            switch(Branch) {
+                case 'C':
+                    printf("Object Oriented Programming\n");
+                    printf("DBMS\n");
+                    printf("Data Structures and Algorithms\n");
+                    break;
+                case 'E':
+                    printf("Analog Electronics\n");
+                    printf("Embedded System\n");
+                    printf("Microcontrollers\n");
+                    break;
+                case 'M':
+                    printf("Applied Mechanics\n");
+                    printf("Kinematics\n");
+                    printf("Mechatronics\n");
+                    break;
+                default:
+                    printf("Invalid Branch\n");
+                    break;
+            }
+            break;
+        case 4:
+            printf("Enter Your Branch (C, E, M ) And If You Are Intern Enter 'I':\n");
+            scanf(" %c", &Branch);
+
+           
+            if (Branch == 'I') {
+                Intern = true;
+            }
+
+            if (Intern == true) {   
+                printf("Continue With The Internship\n");
+            }
+            else {
+                switch(Branch) {
+                    case 'C':
+                        printf("Operating System\n");
+                        printf("Computer Network\n");
+                        printf("Compiler Design\n");
+                        break;
+                    case 'E':
+                        printf("VLSI Design\n");
+                        printf("Fiber Optics Communication\n");
+                        printf("Digital Electronics\n");
+                        break;
+                    case 'M':
+                        printf("Mechanics Of Materials (MOM)\n");
+                        printf("Strength Of Materials (SOM)\n");
+                        printf("Machine Design\n");
+                        break;
+                    default:
+                        printf("Invalid Branch\n");
+                        break;
+                }
+            }
+            break;
+        default:
+            printf("!Invalid Year.\n");
+            printf("Please Enter a Year Between 1 and 4");
+            break;
+    }
+
+    return 0;
+}
