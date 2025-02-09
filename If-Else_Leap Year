@@ -1,3 +1,4 @@
+// approach - 1
 #include <stdio.h>
 
 int main() {
@@ -11,6 +12,34 @@ int main() {
         }
     } else {
         printf("The given year %d is Invalid year.\n", year);
+    }
+    return 0;
+}
+
+// approach - 2
+#include <stdio.h>
+
+int main() {
+    int year;
+    scanf("%d",&year);
+    if(year>0){
+         if(year % 100 ==0){  // rem :> order of year divisible by 100 , 400 , 4 matters a lot
+            if(year % 400 == 0){
+              printf("Yes, %d is a leap year.",year);
+           }
+            else{
+              printf("No, %d is not a leap year.",year);
+            }
+        }   
+        else if(year % 4 == 0){
+          printf("Yes, %d is a leap year.",year);
+        }
+        else{
+          printf("No, %d is not a leap year.",year);
+        }
+     }
+    else{
+      printf("The given year %d is Invalid year.",year);
     }
     return 0;
 }
