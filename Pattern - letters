@@ -1,0 +1,94 @@
+// Letters pattern printing
+// letter B
+#include <stdio.h>
+
+int main() {
+   int n;
+   scanf("%d", &n);
+   
+   for(int i = 0; i <= n; i++) {
+       for(int j = 0; j <= n; j++) {
+        if((j == 0) || (j == n && i != 0 && i != n/2 && i != n) || 
+        (i == n/2) || (i == n && j != n) || (i == 0 && j != n)){
+           printf("*");
+        }
+        else{
+            printf(" ");
+        }
+       }
+       printf("\n");   
+   }
+   
+   return 0;
+}
+
+// letter C
+#include <stdio.h>
+
+int main() {
+   int n;
+   scanf("%d", &n);
+   
+   for(int i = 0; i <= n; i++) {
+       for(int j = 0; j <= n; j++) {
+        if((j == 0 && i != 0 && i != n) || (i == n && j != 0) || (i == 0 && j != 0)){
+           printf("*");
+        }
+        else{
+            printf(" ");
+        }
+       }
+       printf("\n");   
+   }
+   
+   return 0;
+}
+
+
+//letter D
+#include <stdio.h>
+
+int main() {
+   int n;
+   scanf("%d", &n);
+   
+   for(int i = 0; i <= n; i++) {
+       for(int j = 0; j <= n; j++) {
+        if((i == 0 && j <= n/2 ) || (i == n && j <= n/2) || j == 0 || (j == n/2 && i != 0 && i != n)){
+           printf("*");
+        }
+        else{
+            printf(" ");
+        }
+       }
+       printf("\n");   
+   }
+   
+   return 0;
+}
+
+
+// letter G
+
+#include <stdio.h>
+
+int main() {
+   int n;
+   scanf("%d", &n);
+   
+   for(int i = 0; i <= n; i++) {
+       for(int j = 0; j <= n; j++) {
+        if((i == 0 && j != 0 && j != n) || (j == 0 && i != 0 && i != n) ||
+        (i == n && j <= (n-2)/2 && j != 0) || (j == n/2 && i >= (n+1)/2 && i !=n) 
+        || (i == n/2 && j != n && j >= n/2 && j != n/2) || (j ==n && i >= n/2 && i !=n/2)){
+           printf("*");
+        }
+        else{
+            printf(" ");
+        }
+       }
+       printf("\n");   
+   }
+   
+   return 0;
+}
